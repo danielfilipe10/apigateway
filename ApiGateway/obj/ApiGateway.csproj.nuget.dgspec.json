@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\microservices\\ApiGateway\\ApiGateway.csproj": {}
+    "C:\\repos\\microservices\\apigateway\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "C:\\repos\\microservices\\ApiGateway\\ApiGateway.csproj": {
+    "C:\\repos\\microservices\\apigateway\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\microservices\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "C:\\repos\\microservices\\apigateway\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "C:\\repos\\microservices\\ApiGateway\\ApiGateway.csproj",
+        "projectPath": "C:\\repos\\microservices\\apigateway\\ApiGateway\\ApiGateway.csproj",
         "packagesPath": "C:\\Users\\xbdib21\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\microservices\\ApiGateway\\obj\\",
+        "outputPath": "C:\\repos\\microservices\\apigateway\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xbdib21\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -36,7 +36,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Ocelot": {
+              "target": "Package",
+              "version": "[14.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
