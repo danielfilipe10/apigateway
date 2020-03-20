@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AuthServer.Services;
+using AuthServer.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +29,10 @@ namespace AuthServer
         {
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddOptions();
-            services.Configure<Controllers.AuthController.Audience>(Configuration.GetSection("Audience"));
+            services.Configure<AuthService.Audience>(Configuration.GetSection("Audience"));
+
+
+            services.AddScoped<IAuthService, AuthService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,8 +42,13 @@ namespace AuthServer
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvc();
+            //app.UseRouting();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    //endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+            //    endpoints.MapControllers();
+            //});
 
         }
     }

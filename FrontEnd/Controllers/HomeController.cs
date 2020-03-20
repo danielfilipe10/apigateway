@@ -22,6 +22,18 @@ namespace FrontEnd.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(model.Username);
+            }
+            else
+            {
+                return View();
+            }         
+        }
 
         public IActionResult Privacy()
         {
